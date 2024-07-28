@@ -1,4 +1,6 @@
-﻿namespace Dominio
+﻿using System;
+
+namespace Dominio
 {
     public class Usuario
     {

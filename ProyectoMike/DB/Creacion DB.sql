@@ -52,4 +52,14 @@ ID_FILA bigint not null foreign key references FilasEnBolsas(ID),
 CANTIDAD bigint not null
 )
 
+create table Fundas_X_Fila(
+ID bigint not null primary key identity(1,1),
+ID_FUNDA bigint not null foreign key references Fundas(ID),
+ID_FILA bigint not null foreign key references FilasEnBolsas(ID),
+CANTIDAD bigint not null
+)
+
+alter table Movimientos
+add FECHA date not null
+
 INSERT INTO Usuarios(NOMBRE, APELLIDO, USUARIO, CLAVE) VALUES ('Alejo','Chavez','alejo','alejo1234');
